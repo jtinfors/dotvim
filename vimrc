@@ -1,7 +1,7 @@
 set nocompatible
 set syntax=on
 set history=300
-set autoread "automatically updates files edited from outside vim
+set autoread
 set nobackup
 set noswapfile
 set expandtab
