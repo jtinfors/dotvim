@@ -24,4 +24,4 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType javascript,html,ruby,css set sw=2
 autocmd FileType text set tw=80
 
-set guifont=Menlo_Regular:h12
+set go-=T
