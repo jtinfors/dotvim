@@ -8,9 +8,15 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 set smarttab
+set smartindent
 set autoindent
+set autoread
+set encoding=utf8
 
 color vividchalk
+
+let mapleader = ","
+let g:mapleader = ","
 
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
@@ -24,4 +30,3 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType javascript,html,ruby,css set sw=2
 autocmd FileType text set tw=80
 
-set go-=T
