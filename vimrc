@@ -12,16 +12,19 @@ set smartindent
 set autoindent
 set autoread
 set encoding=utf8
+set number
+set ruler
 
 color vividchalk
 
 let mapleader = ","
 let g:mapleader = ","
 
+filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
-
 filetype plugin indent on
+
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
