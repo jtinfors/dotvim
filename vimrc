@@ -15,8 +15,6 @@ set encoding=utf8
 set number
 set ruler
 
-color vividchalk
-
 let mapleader = ","
 let g:mapleader = ","
 
