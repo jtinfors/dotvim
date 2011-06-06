@@ -1,6 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/jens/projects/ingenero/trunk'
-let g:netrw_dirhist_2='/Users/jens/projects/backlogd/app/views/tweets'
-let g:netrw_dirhist_3='/Users/jens/projects/backlogd'
-let g:netrw_dirhist_4='/Users/jens/projects/akutguiden/config/initializers'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/jens/projects/license_manager2/app/assets/javascripts'
