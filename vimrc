@@ -14,6 +14,7 @@ set autoread
 set encoding=utf8
 set number
 set ruler
+set hlsearch
 
 let mapleader = ","
 let g:mapleader = ","
