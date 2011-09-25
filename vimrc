@@ -1,5 +1,4 @@
 set nocompatible
-syntax on
 set history=300
 set autoread
 set nobackup
@@ -32,3 +31,6 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType javascript,html,ruby,css,coffee set sw=2
 autocmd FileType text set tw=80
 
+syntax enable
+set background=dark
+colorscheme solarized
