@@ -7,6 +7,9 @@ git submodule init
 Update a submodule:
 git submodule update
 
+Update all:
+git submodule foreach git pull origin master
+
 Remove a submodule:
 There is not efficient way to remove a submodule
 * first step is remove references to the submodule in .gitmodules and .git/config.
