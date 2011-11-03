@@ -33,4 +33,4 @@ autocmd FileType text set tw=80
 
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme peachpuff

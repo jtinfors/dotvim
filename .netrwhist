@@ -1,6 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/jens/projects/license_manager2/app/assets/javascripts'
-let g:netrw_dirhist_2='/Users/jens/projects/ingenero/intranet/trunk/features'
-let g:netrw_dirhist_3='/home/jens/projects/ingenero/intranet/trunk/app/views/shortcuts'
-let g:netrw_dirhist_4='/home/jens/projects/ingenero/intranet/trunk/app/views'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/jens/projects/ingenero/intranet/trunk/app/assets/javascripts'
+let g:netrw_dirhist_2='/home/jens/projects/Dojo-Ajax-Toolkit-Free-Training/2. Custom Widgets/Exercise 2 - Use and re-use of widgets/Exercise'
+let g:netrw_dirhist_3='/home/jens/projects/Dojo-Ajax-Toolkit-Free-Training/2. Custom Widgets/Exercise 2 - Use and re-use of widgets/Exercise/mycustom'
+let g:netrw_dirhist_4='/home/jens/projects/Dojo-Ajax-Toolkit-Free-Training/2. Custom Widgets/Exercise 2 - Use and re-use of widgets/Exercise'
+let g:netrw_dirhist_5='/home/jens/projects/ingenero/intranet/trunk/config/deploy'
+let g:netrw_dirhist_6='/home/jens/projects/ingenero/intranet/trunk/config'
+let g:netrw_dirhist_7='/home/jens/projects/ingenero/intranet/trunk/app/assets/stylesheets'
+let g:netrw_dirhist_8='/home/jens/projects/akutguiden'
