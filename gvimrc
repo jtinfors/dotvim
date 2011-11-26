@@ -1,4 +1,5 @@
 color solarized
+set background=dark
 if has("unix")
     let s:uname = system("uname")
     if s:uname == "Linux\n"
