@@ -13,7 +13,9 @@ set autoread
 set encoding=utf8
 set number
 set ruler
-set hlsearch
+set nohlsearch
+set incsearch
+set showmatch
 
 let mapleader = ","
 let g:mapleader = ","
@@ -34,3 +36,6 @@ autocmd FileType text set tw=80
 syntax enable
 set background=dark
 colorscheme peachpuff
+
+set tags=~/.tags
+let g:ctrlp_custom_ignore = { 'dir':  '\.git$\|\.hg$\|\.svn$|\./build$', 'file': '\.so$', }
