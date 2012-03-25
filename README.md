@@ -9,6 +9,9 @@ This is my very much personal repo for my vim dot files. I use it to easily set 
 
 `ln -s .vim/gvimrc .gvimrc`
 
+Initialize and update submodules
+`git submodule update --init`
+
 ### To add a submodule do:
 `git submodule add <url> <folder>`
 
