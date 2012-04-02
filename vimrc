@@ -13,9 +13,10 @@ set autoread
 set encoding=utf8
 set number
 set ruler
-set nohlsearch
+set hlsearch
 set incsearch
 set showmatch
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 let mapleader = ","
 let g:mapleader = ","
@@ -34,8 +35,8 @@ autocmd FileType javascript,html,ruby,css,coffee set sw=2
 autocmd FileType text set tw=80
 
 syntax enable
+colorscheme solarized
 set background=dark
-colorscheme peachpuff
 
 set tags=~/.tags
 let g:ctrlp_custom_ignore = { 'dir':  '\.git$\|\.hg$\|\.svn$|\./build$', 'file': '\.so$', }
