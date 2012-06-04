@@ -1,8 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/jens/projects/flaskr/spec/javascripts'
-let g:netrw_dirhist_2='/home/jens/projects/flaskr/spec/javascripts/helpers'
-let g:netrw_dirhist_3='/home/jens/projects/flaskr/spec/javascripts'
-let g:netrw_dirhist_4='/home/jens/projects/flaskr/spec/javascripts/support'
-let g:netrw_dirhist_5='/home/jens/projects/kitin'
-let g:netrw_dirhist_6='/home/jens/projects/kitin/templates'
+let g:netrw_dirhist_cnt =0
