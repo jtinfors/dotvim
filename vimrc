@@ -31,12 +31,12 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-autocmd FileType javascript,html,ruby,css,coffee set sw=2
+autocmd FileType groovy,xml,java,javascript,html,ruby,css,coffee set sw=2
 autocmd FileType text set tw=80
 
 syntax enable
 colorscheme solarized
 set background=dark
 
-set tags=~/.tags
-let g:ctrlp_custom_ignore = { 'dir':  '\.git$\|\.hg$\|\.svn$|\./build$', 'file': '\.so$', }
+set wildignore+=*/tmp/*,*/target/*,*/build/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = { 'dir':  '\.git$\|\.hg$\|\.svn$|\./build$|\./target$|\./out$', 'file': '\.so$', }

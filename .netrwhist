@@ -1,2 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =0
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/jens/.irssi'
+let g:netrw_dirhist_2='/home/jens/projects/vhs_applicationservice/nya-simulator/datasets/set1/application/HT14NYA'
+let g:netrw_dirhist_3='/home/jens/projects/vhs_applicationservice/webtests/src/test'
+let g:netrw_dirhist_4='/home/jens/projects/vhs_applicationservice/webtests/src/test/groovy'
+let g:netrw_dirhist_5='/home/jens/projects/vhs_applicationservice/webtests/src/test/groovy/aweb'
+let g:netrw_dirhist_6='/home/jens/projects/vhs_applicationservice/webtests/src/test/groovy/aweb/pages'
+let g:netrw_dirhist_7='/home/jens/tmp'
+let g:netrw_dirhist_8='/home/jens'
+let g:netrw_dirhist_9='/home/jens/tmp'
