@@ -40,3 +40,5 @@ set background=dark
 
 set wildignore+=*/tmp/*,*/target/*,*/build/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = { 'dir':  '\.git$\|\.hg$\|\.svn$|\./build$|\./target$|\./out$', 'file': '\.so$', }
+
+let g:slime_target = "tmux"
