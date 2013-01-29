@@ -31,7 +31,7 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-autocmd FileType groovy,xml,java,javascript,html,ruby,css,coffee set sw=2
+autocmd FileType sh,groovy,xml,java,javascript,html,ruby,css,coffee set sw=2
 autocmd FileType text set tw=80
 
 syntax enable
@@ -42,3 +42,4 @@ set wildignore+=*/tmp/*,*/target/*,*/build/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = { 'dir':  '\.git$\|\.hg$\|\.svn$|\./build$|\./target$|\./out$', 'file': '\.so$', }
 
 let g:slime_target = "tmux"
+"let g:slime_paste_file = "$HOME/.slime_paste"

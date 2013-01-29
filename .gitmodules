@@ -25,3 +25,6 @@
 [submodule "bundle/vim-javascript"]
 	path = bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
+[submodule "bundle/VimClojure"]
+	path = bundle/VimClojure
+	url = git://github.com/vim-scripts/VimClojure.git
