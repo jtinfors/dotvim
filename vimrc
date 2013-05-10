@@ -38,8 +38,11 @@ syntax enable
 colorscheme solarized
 set background=dark
 
-set wildignore+=*/tmp/*,*/target/*,*/build/*,*.so,*.swp,*.zip
-let g:ctrlp_custom_ignore = { 'dir':  '\.git$\|\.hg$\|\.svn$|\./build$|\./target$|\./out$', 'file': '\.so$', }
-
 let g:slime_target = "tmux"
 "let g:slime_paste_file = "$HOME/.slime_paste"
+set tags=~/.tags
+let g:ctrlp_custom_ignore = { 'dir':  '\./dist$|\./target$|\.git$\|\.hg$\|\.svn$|\./build$', 'file': '\.so$', }
+
+let g:vimclojure#HighlightBuiltins = 1
+let g:vimclojure#ParenRainbow = 1
+
