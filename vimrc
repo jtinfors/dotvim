@@ -38,12 +38,18 @@ syntax enable
 colorscheme solarized
 set background=dark
 
-set wildignore+=*/tmp/*,*/target/*,*/build/*,*.so,*.swp,*.zip
-let g:ctrlp_custom_ignore = { 'dir':  '\.git$\|\.hg$\|\.svn$|\./build$|\./target$|\./out$', 'file': '\.so$', }
-
 let g:slime_target = "tmux"
 "let g:slime_paste_file = "$HOME/.slime_paste"
+<<<<<<< HEAD
 
 "NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
+=======
+set tags=~/.tags
+let g:ctrlp_custom_ignore = { 'dir':  '\./dist$|\./target$|\.git$\|\.hg$\|\.svn$|\./build$', 'file': '\.so$', }
+
+let g:vimclojure#HighlightBuiltins = 1
+let g:vimclojure#ParenRainbow = 1
+
+>>>>>>> 12e8cb6669d22e1f2962c029478bc19451dc2f54

@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/jens/projects/my-website/src'
+let g:netrw_dirhist_2='/Users/jens/projects/my-website/src/my_website'
+let g:netrw_dirhist_3='/Users/jens/projects/my-website/src/my_website/views'
+let g:netrw_dirhist_4='/Users/jens/Dropbox'
+let g:netrw_dirhist_5='/Users/jens/projects/dagger-engine/src/de/views'
