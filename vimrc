@@ -43,3 +43,7 @@ let g:ctrlp_custom_ignore = { 'dir':  '\.git$\|\.hg$\|\.svn$|\./build$|\./target
 
 let g:slime_target = "tmux"
 "let g:slime_paste_file = "$HOME/.slime_paste"
+
+"NERDTree
+autocmd vimenter * if !argc() | NERDTree | endif
+map <C-n> :NERDTreeToggle<CR>
