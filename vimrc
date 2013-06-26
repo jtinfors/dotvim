@@ -2,22 +2,28 @@ set nocompatible
 set history=300
 set autoread
 set nobackup
+set nowritebackup
 set noswapfile
 set expandtab
 set shiftwidth=4
 set tabstop=4
 set smarttab
-set smartindent
 set autoindent
-set autoread
+set smartindent
 set encoding=utf8
+set fileformats=unix,dos,mac
 set number
 set ruler
 set hlsearch
 set incsearch
 set showmatch
+set scrolloff=1
+set wildmenu
+set ignorecase
+set smartcase
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
+command! W :w
 let mapleader = ","
 let g:mapleader = ","
 
