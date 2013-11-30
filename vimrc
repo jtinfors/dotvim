@@ -21,6 +21,7 @@ set scrolloff=1
 set wildmenu
 set ignorecase
 set smartcase
+set wildignore=*.swp,*.bak,*.pyc,*.class
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 command! W :w
