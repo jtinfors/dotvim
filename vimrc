@@ -39,6 +39,7 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType sh,groovy,xml,java,javascript,html,ruby,css,coffee set sw=2
+autocmd FileType java set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 autocmd FileType text set tw=80
 
 syntax enable
@@ -58,3 +59,4 @@ let g:ctrlp_custom_ignore = { 'dir':  '\./dist$|\./target$|\.git$\|\.hg$\|\.svn$
 let g:vimclojure#HighlightBuiltins = 1
 let g:vimclojure#ParenRainbow = 1
 
+set tags=.tags
