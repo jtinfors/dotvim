@@ -11,7 +11,7 @@ if [[ ! "$(type -P gcc)" && "$OSTYPE" =~ ^darwin ]]; then
   exit 1
 fi
 
-## *nix. Make sure we have git (Darwain ships with it)
+## *nix. Make sure we have git (Darwin ships with it)
 if [[ "$OSTYPE" =~ linux-gnu && ! "$(type -P git)" ]]; then
   e_header "Installing Git"
   sudo apt-get -qq install git
@@ -34,4 +34,7 @@ ln -s .vim/vimrc .vimrc
 ln -s .vim/gvimrc .gvimrc
 
 ## Ignore untracked files in submodules
+cd $HOME/.vim
 for s in `git submodule  --quiet foreach 'echo $name'` ; do git config submodule.$s.ignore untracked ; done
+cd -
+
