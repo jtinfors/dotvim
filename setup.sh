@@ -6,7 +6,7 @@ function e_error()    { echo -e " \033[1;31m✖\033[0m  $@"; }
 function e_arrow()    { echo -e " \033[1;33m➜\033[0m  $@"; }
 
 function install_essential_ubuntu_packages() {
-  packages=(ack-grep vim curl build-essential libssl-dev git mercurial)
+  packages=(ack-grep vim build-essential libssl-dev git mercurial)
   for package in "${packages[@]}"; do
     if [[ ! "$(dpkg --list "$package" 2>/dev/null | grep -e "^ii[[:space:]]\+$package")" ]]; then
       sudo apt-get -qq install $package
@@ -23,7 +23,6 @@ fi
 ## *nix. Make sure we have git (Darwin ships with it) and other essentials
 if [[ "$OSTYPE" =~ linux-gnu && ! "$(type -P git)" ]]; then
   e_header "Installing Git"
-  sudo apt-get -qq install git
   install_essential_ubuntu_packages
 fi
 
