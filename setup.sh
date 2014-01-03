@@ -9,7 +9,7 @@ function install_essential_ubuntu_packages() {
   packages=(ack-grep vim curl build-essential libssl-dev git mercurial)
   for package in "${packages[@]}"; do
     if [[ ! "$(dpkg --list "$package" 2>/dev/null | grep -e "^ii[[:space:]]\+$package")" ]]; then
-      sudo apt-get install $package
+      sudo apt-get -qq install $package
     fi
   done
 }
