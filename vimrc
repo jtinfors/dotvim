@@ -60,8 +60,6 @@ autocmd FileType java set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 autocmd FileType text set tw=80
 
 syntax enable
-colorscheme solarized
-set background=dark
 
 let g:slime_target = "tmux"
 "let g:slime_paste_file = "$HOME/.slime_paste"
