@@ -42,6 +42,10 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'Shutnik/jshint2.vim'
+Bundle 'tomtom/tlib_vim'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
 
 filetype plugin indent on
 
