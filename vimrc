@@ -33,7 +33,8 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'"
+
+Bundle 'gmarik/vundle'
 
 " Older raw pathogen stuff:
 " call pathogen#runtime_append_all_bundles()
