@@ -31,14 +31,8 @@ let g:mapleader = ","
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-" let Vundle manage Vundle
-" required! 
 
 Bundle 'gmarik/vundle'
-
-" Older raw pathogen stuff:
-" call pathogen#runtime_append_all_bundles()
-" call pathogen#helptags()
 
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
@@ -62,17 +56,10 @@ autocmd FileType text set tw=80
 
 syntax enable
 
-let g:slime_target = "tmux"
-"let g:slime_paste_file = "$HOME/.slime_paste"
-
 "NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
 
-set tags=~/.tags
+set tags=./tags;
 let g:ctrlp_custom_ignore = { 'dir':  '\./dist$|\./target$|\.git$\|\.hg$\|\.svn$|\./build$', 'file': '\.so$', }
 
-let g:vimclojure#HighlightBuiltins = 1
-let g:vimclojure#ParenRainbow = 1
-
-set tags=.tags

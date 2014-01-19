@@ -40,3 +40,6 @@ ln -s .vim/vimrc .vimrc
 ln -s .vim/gvimrc .gvimrc
 cd -
 
+echo "colorscheme solarized" >> $HOME/.vim/vimrc
+echo "set background=dark" >> $HOME/.vim/vimrc
+
