@@ -29,8 +29,25 @@ let mapleader = ","
 let g:mapleader = ","
 
 filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'"
+
+" Older raw pathogen stuff:
+" call pathogen#runtime_append_all_bundles()
+" call pathogen#helptags()
+
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'kien/ctrlp.vim'
+Bundle 'kana/vim-smartinput'
+Bundle 'pangloss/vim-javascript'
+Bundle 'scrooloose/nerdtree'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'Shutnik/jshint2.vim'
+
 filetype plugin indent on
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete

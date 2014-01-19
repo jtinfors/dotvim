@@ -9,41 +9,34 @@ function install_essential_ubuntu_packages() {
   packages=(ack-grep vim build-essential libssl-dev git mercurial)
   for package in "${packages[@]}"; do
     if [[ ! "$(dpkg --list "$package" 2>/dev/null | grep -e "^ii[[:space:]]\+$package")" ]]; then
+      e_header "${package}.."
       sudo apt-get -qq install $package
     fi
   done
 }
 
-## Darwin. Ensure that we can actually, like, compile anything.
+## Darwin. Ensure that we can actually compile stuff
 if [[ ! "$(type -P gcc)" && "$OSTYPE" =~ ^darwin ]]; then
-  e_error "XCode or the Command Line Tools for XCode must be installed first."
-  exit 1
+  e_error "Install XCode or at least the Command Line Tools first." && exit 1
 fi
 
 ## *nix. Make sure we have git (Darwin ships with it) and other essentials
 if [[ "$OSTYPE" =~ linux-gnu && ! "$(type -P git)" ]]; then
-  e_header "Installing Git"
   install_essential_ubuntu_packages
 fi
 
 if [[ ! -d ~/.vim ]]; then
-  e_header "Downloading dotfiles"
-  git clone --recursive git://github.com/jtinfors/dotvim.git ~/.vim
-  cd ~/.vim
+  e_header "cloning dotvim.."
+  git clone git://github.com/jtinfors/dotvim.git ~/.vim
+  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+  vim +BundleInstall +qall
 else
-  e_header "Updating dotfiles"
-  cd ~/.vim
-  git pull
-  git submodule update --init --recursive --quiet
-  cd -
+  e_header "Updating.."
+  vim +BundleInstall! +qall
 fi
 
 cd $HOME
 ln -s .vim/vimrc .vimrc
 ln -s .vim/gvimrc .gvimrc
-
-## Ignore untracked files in submodules
-cd $HOME/.vim
-for s in `git submodule  --quiet foreach 'echo $name'` ; do git config submodule.$s.ignore untracked ; done
 cd -
 
