@@ -35,10 +35,8 @@ else
   vim +BundleInstall! +qall
 fi
 
-cd $HOME
-ln -s .vim/vimrc .vimrc
-ln -s .vim/gvimrc .gvimrc
-cd -
+[[ ! -L $HOME/.vimrc ]] && ln -s $HOME/.vim/vimrc $HOME/.vimrc
+[[ ! -L $HOME/.gvimrc ]] && ln -s $HOME/.vim/gvimrc $HOME/.gvimrc
 
 echo "colorscheme solarized" >> $HOME/.vim/vimrc
 echo "set background=dark" >> $HOME/.vim/vimrc
