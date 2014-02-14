@@ -46,6 +46,7 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
+Bundle 'bling/vim-airline'
 
 filetype plugin indent on
 
@@ -60,10 +61,16 @@ autocmd FileType text set tw=80
 
 syntax enable
 
-"NERDTree
+" NERDTree stuff
 autocmd vimenter * if !argc() | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
 
 set tags=./tags;
 let g:ctrlp_custom_ignore = { 'dir':  '\./dist$|\./target$|\.git$\|\.hg$\|\.svn$|\./build$', 'file': '\.so$', }
+
+" vim-airline stuff
+set laststatus=2
+let g:airline_powerline_fonts = 1
+let g_airline_theme = "jellybeans"
+let g:airline#extensions#tabline#enabled = 1
 
