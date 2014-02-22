@@ -72,5 +72,5 @@ let g:ctrlp_custom_ignore = { 'dir':  '\./dist$|\./target$|\.git$\|\.hg$\|\.svn$
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g_airline_theme = "jellybeans"
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 
