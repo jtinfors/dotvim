@@ -91,3 +91,5 @@ let g:airline#extensions#syntastic#enabled = 1
 
 set background=dark
 colorscheme smyck
+
+let g:syntastic_javascript_checkers = ['jshint']
