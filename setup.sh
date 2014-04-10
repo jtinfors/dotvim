@@ -5,8 +5,13 @@ function e_success()  { echo -e " \033[1;32m✔\033[0m  $@"; }
 function e_error()    { echo -e " \033[1;31m✖\033[0m  $@"; }
 function e_arrow()    { echo -e " \033[1;33m➜\033[0m  $@"; }
 
+function install_essntial_osx_packages() {
+  ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+  brew install git git-extras the_silver_searcher
+}
+
 function install_essential_ubuntu_packages() {
-  packages=(ack-grep vim build-essential libssl-dev git mercurial)
+  packages=(ack-grep vim build-essential libssl-dev git mercurial silversearcher-ag)
   for package in "${packages[@]}"; do
     if [[ ! "$(dpkg --list "$package" 2>/dev/null | grep -e "^ii[[:space:]]\+$package")" ]]; then
       e_header "${package}.."
@@ -17,7 +22,9 @@ function install_essential_ubuntu_packages() {
 
 ## Darwin. Ensure that we can actually compile stuff
 if [[ ! "$(type -P gcc)" && "$OSTYPE" =~ ^darwin ]]; then
-  e_error "Install XCode or at least the Command Line Tools first." && exit 1
+  e_error "Install XCode or at least the XCode Command Line Tools first." && exit 1
+else
+  install_essntial_osx_packages
 fi
 
 ## *nix. Make sure we have git (Darwin ships with it) and other essentials

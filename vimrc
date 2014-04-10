@@ -28,6 +28,15 @@ command! W :w
 let mapleader = ","
 let g:mapleader = ","
 
+nmap <leader>lw :CtrlP<CR><C-\>w
+vmap <leader>lw y:CtrlP<CR><C-\>c
+
+function! SearchCurrentWord()
+	let l:wuc = expand("<cword>")
+	execute ":Ag " . l:wuc
+endfunction
+nnoremap <leader>a :call SearchCurrentWord()<cr>
+
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -38,15 +47,17 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'kien/ctrlp.vim'
 Bundle 'kana/vim-smartinput'
-Bundle 'pangloss/vim-javascript'
+" Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'Shutnik/jshint2.vim'
+Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tlib_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'garbas/vim-snipmate'
-Bundle 'honza/vim-snippets'
+" Bundle 'honza/vim-snippets'
 Bundle 'bling/vim-airline'
+Bundle 'rking/ag.vim'
+Bundle 'bufexplorer.zip'
 
 filetype plugin indent on
 
@@ -55,11 +66,14 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-autocmd FileType sh,groovy,xml,java,javascript,html,ruby,css,coffee set sw=2
-autocmd FileType java set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+autocmd FileType sh,groovy,xml,html,ruby,css,coffee set sw=2
+autocmd FileType javascript set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab
+autocmd FileType java set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab "SVT dev env
 autocmd FileType text set tw=80
+autocmd BufNewFile,BufRead *.json set ft=javascript
 
 syntax enable
+set listchars=tab:▸\ ,trail:·,eol:¬ " From iljo to display friendlier chars for :list
 
 " NERDTree stuff
 autocmd vimenter * if !argc() | NERDTree | endif
@@ -71,6 +85,9 @@ let g:ctrlp_custom_ignore = { 'dir':  '\./dist$|\./target$|\.git$\|\.hg$\|\.svn$
 " vim-airline stuff
 set laststatus=2
 let g:airline_powerline_fonts = 1
-let g_airline_theme = "jellybeans"
+let g_airline_theme = "molokai"
 let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#syntastic#enabled = 1
 
+set background=dark
+colorscheme smyck
