@@ -23,6 +23,7 @@ set ignorecase
 set smartcase
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set hidden
+set backspace=eol,start,indent  " allow backspacing over everything in insert mode"
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 command! W :w
@@ -42,6 +43,7 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'gmarik/vundle'
 Bundle 'pangloss/vim-javascript'
 Bundle 'nathanaelkane/vim-indent-guides'
