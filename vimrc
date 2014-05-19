@@ -60,6 +60,7 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'bling/vim-airline'
 Bundle 'rking/ag.vim'
 Bundle 'bufexplorer.zip'
+Bundle 'jnwhiteh/vim-golang'
 
 filetype plugin indent on
 
@@ -93,6 +94,6 @@ let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#syntastic#enabled = 1
 
 set background=dark
-colorscheme smyck
+colorscheme vividchalk
 
 let g:syntastic_javascript_checkers = ['jshint']
