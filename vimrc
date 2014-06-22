@@ -60,7 +60,7 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'bling/vim-airline'
 Bundle 'rking/ag.vim'
 Bundle 'bufexplorer.zip'
-Bundle 'jnwhiteh/vim-golang'
+Bundle 'uggedal/go-vim'
 
 filetype plugin indent on
 
@@ -92,6 +92,8 @@ let g:airline_powerline_fonts = 1
 let g_airline_theme = "powerlineish"
 let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#syntastic#enabled = 1
+set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+set t_Co=256
 
 set background=dark
 colorscheme vividchalk
