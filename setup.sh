@@ -23,29 +23,32 @@ function install_essential_ubuntu_packages() {
   done
 }
 
+function install_powerline_fonts_ubuntu() {
+  if [[ ! -d ~/projects/fonts ]]; then
+    git clone git@github.com:powerline/fonts.git $HOME/projects/fonts
+    cd $HOME/projects/fonts && ./install.sh && cd -
+    fc-cache -vf $HOME/.local/share/fonts
+  fi
+}
+
 ## Darwin. Ensure that we can actually compile stuff
 if [[ "$OSTYPE" =~ ^darwin ]]; then
   install_essntial_osx_packages
 elif [[ "$OSTYPE" =~ linux-gnu ]]; then
   install_essential_ubuntu_packages
+  install_powerline_fonts_ubuntu
 fi
 
 if [[ ! -d ~/.vim ]]; then
   e_header "cloning.."
 
   git clone git://github.com/jtinfors/dotvim.git ~/.vim
-  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
   [[ ! -L $HOME/.vimrc ]] && ln -s $HOME/.vim/vimrc $HOME/.vimrc
   [[ ! -L $HOME/.gvimrc ]] && ln -s $HOME/.vim/gvimrc $HOME/.gvimrc
 
   vim +BundleInstall +qall
-
-  [[ -f $HOME/.vimrc && -z "$(grep 'colorscheme solarized' $HOME/.vimrc)" ]] && echo "colorscheme solarized" >> $HOME/.vim/vimrc
-  [[ -f $HOME/.vimrc && -z "$(grep 'baskground' $HOME/.vimrc)" ]] && echo "set background=dark" >> $HOME/.vim/vimrc
-else
-  e_header "Updating.."
-  vim +BundleInstall! +qall
 fi
 
 ## Set zsh as default shell
