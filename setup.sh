@@ -10,7 +10,7 @@ function install_essntial_osx_packages() {
     e_error "Install XCode or at least the XCode Command Line Tools first." && exit 1
   fi
   ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
-  brew zsh install git git-extras the_silver_searcher
+  brew install zsh git git-extras the_silver_searcher
 }
 
 function install_essential_ubuntu_packages() {
