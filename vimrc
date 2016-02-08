@@ -93,6 +93,5 @@ set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 set t_Co=256
 
 set background=dark
-colorscheme grb256
 
 let g:syntastic_javascript_checkers = ['eslint']
