@@ -51,8 +51,10 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/syntastic'
+Plugin 'tomtom/tlib_vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'garbas/vim-snipmate'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'rking/ag.vim'
@@ -78,7 +80,7 @@ set listchars=tab:▸\ ,trail:·,eol:¬ " From iljo to display friendlier chars 
 
 " NERDTree stuff
 autocmd vimenter * if !argc() | NERDTree | endif
-map <C-n> :NERDTreeToggle<CR>
+noremap <C-n> :NERDTreeToggle<CR>
 
 set tags=./tags;
 let g:ctrlp_custom_ignore = { 'dir':  '\./dist$|\./target$|\.git$\|\.hg$\|\.svn$|\./build$', 'file': '\.so$', }
@@ -93,5 +95,6 @@ set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 set t_Co=256
 
 set background=dark
+colorscheme grb256
 
 let g:syntastic_javascript_checkers = ['eslint']
